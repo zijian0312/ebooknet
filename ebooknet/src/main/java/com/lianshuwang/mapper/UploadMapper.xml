@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lianshuwang.dao.UploadDao">
+
+    <resultMap id="uploadMap" type="com.lianshuwang.domin.Upload">
+        <id column="id" property="id" />
+        <result column="uploader" property="uploader" />
+        <result column="uploadedBook" property="uploadedBook" />
+        <result column="uploadedDate" property="uploadedDate" />
+    </resultMap>
+
+    <sql id="upload_columns">
+        id, uploader, uploadedBook, uploadedDate
+    </sql>
+
+    <select id="queryById" parameterType="int" resultMap="uploadMap">
+        SELECT
+        <include refid="upload_columns"/>
+        from upload WHERE id=#{id}
+    </select>
+
+    <insert id="addUploadRecord" parameterType="Upload">
+        insert into
+        upload(uploader, uploadedBook, uploadedDate)
+        values(#{uploader},#{uploadedBook},#{uploadedDate})
+    </insert>
+
+    <select id="queryByBookId" parameterType="long" resultMap="uploadMap">
+        SELECT
+        <include refid="upload_columns" />
+        from upload where uploadedBook=#{uploadedBook}
+    </select>
+    
+    <select id="getMaxUploadDate" resultType="Date">
+        select max(uploadedDate) from upload
+    </select>
+
+    <select id="queryByUploadedDate" resultMap="uploadMap">
+        select
+        <include refid="upload_columns" />
+        from upload order by id desc limit 6
+    </select>
+
+    <select id="queryByUserId" parameterType="long" resultMap="uploadMap">
+        select
+        <include refid="upload_columns" />
+        from upload where uploader=#{userId}
+        order by id desc
+    </select>
+    
+    <delete id="deleteUploadRow" parameterType="long">
+        delete from upload where uploadedBook=#{uploadedBook}
+    </delete>
+
+    <delete id="deleteUploadRowByUser" parameterType="long">
+        delete from upload where uploader=#{uploader}
+    </delete>
+
+    <select id="searchByToday" resultMap="uploadMap">
+        select
+        <include refid="upload_columns" />
+        from upload where TO_DAYS(uploadedDate)=TO_DAYS(NOW())
+        order by id desc
+    </select>
+    
+    <select id="searchBySevenDays" resultMap="uploadMap">
+        select
+        <include refid="upload_columns" />
+        from upload
+        where DATE_SUB(CURDATE(), INTERVAL 7 DAY) &lt;= date(uploadedDate)
+        order by id desc
+    </select>
+
+    <select id="searchByThirtyDays" resultMap="uploadMap">
+        select
+        <include refid="upload_columns" />
+        from upload
+        where DATE_SUB(CURDATE(), INTERVAL 30 DAY) &lt;= date(uploadedDate)
+        order by id desc
+    </select>
+
+</mapper>

@@ -1,0 +1,55 @@
+body {
+    max-height: 766px;
+}
+/*顶部导航栏样式*/
+.navbar .navbar-header .navbar-toggle {
+    margin-top: 20px;
+}
+.navbar .navbar-header .navbar-brand {
+    padding-top: 7px;
+    margin-right: 10px;
+    width: 150px;
+    height: 70px;
+}
+.navbar #navbar {
+    padding-top: 12px;
+}
+.navbar #navbar ul.nav {
+    margin-left: 30px;
+}
+/*登录注册按钮央视*/
+.navbar #navbar .btn-group {
+    padding-top: 7px;
+    margin-right: 10px;
+}
+/*已登录用户头像信息样式*/
+.navbar #navbar #loginedInfo {
+    padding-top: 2px;
+    margin-right: 10px;
+}
+.navbar #navbar #loginedInfo img {
+    width:50px;
+    height: 50px;
+}
+
+#bookDetail.container .row {
+    margin-top: 100px;
+}
+#bookDetail.container .row .panel-body .book-cover img {
+    max-width: 100% !important;
+    height: 360px;
+}
+#bookDetail.container .row .panel-body .book-labels {
+    margin-top: 30px;
+}
+#bookDetail.container .row .panel-body .book-labels .label-name {
+    width: 76px;
+    text-align: right;
+}
+#bookDetail.container .row .panel-body .book-labels .label-value {
+    width: 350px;
+    float: right;
+}
+#bookDetail.container .row .panel-body .alert {
+    margin-top: 30px;
+}

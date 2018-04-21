@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lianshuwang.dao.BookDao">
+
+    <resultMap id="bookMap" type="com.lianshuwang.domin.Book">
+        <id column="id" property="id" />
+        <result column="book_title" property="book_title" />
+        <result column="book_author" property="book_author" />
+        <result column="book_pubYear" property="book_pubYear" />
+        <result column="book_summary" property="book_summary" />
+        <result column="type_id" property="type_id" />
+        <result column="book_format" property="book_format" />
+        <result column="download_times" property="download_times" />
+        <result column="book_file" property="book_file" />
+        <result column="book_cover" property="book_cover" />
+    </resultMap>
+
+    <sql id="book_columns">
+        id, book_title, book_author, book_pubYear, book_summary,
+            type_id, book_format, download_times, book_file, book_cover
+    </sql>
+
+    <!--通过图书ID查询图书-->
+    <select id="queryById" parameterType="long" resultMap="bookMap">
+        SELECT
+        <include refid="book_columns"/>
+        from book WHERE id=#{id}
+    </select>
+
+    <!--通过图书名称判断是否已经存在-->
+    <select id="queryByTitle" parameterType="String" resultMap="bookMap">
+        SELECT
+        <include refid="book_columns" />
+        from book where book_title=#{title}
+    </select>
+
+    <!--查询电子图书总数-->
+    <select id="queryNumberOfBooks" resultType="int">
+        SELECT count(*) from book
+    </select>
+
+    <!--查询各大类型图书数目-->
+    <select id="queryNumberOfSomeTypeBooks" parameterType="int" resultType="int">
+        SELECT count(*) FROM book WHERE type_id LIKE concat(#{largeType},'%')
+    </select>
+
+
+    <!--添加图书-->
+    <insert id="addBook" parameterType="Book">
+        insert into 
+        book(id,book_title,book_author,book_pubYear,book_summary,type_id,book_format,download_times,book_file,book_cover)
+        values(#{id},#{book_title},#{book_author},#{book_pubYear},#{book_summary},#{type_id},#{book_format},#{download_times},#{book_file},#{book_cover})
+    </insert>
+
+    <!--查询主类型图书-->
+    <select id="getLargeTypeBooks" resultMap="bookMap">
+        SELECT
+        id, book_title, book_file, book_cover
+        from book where type_id in 
+        <foreach collection="list" item="bookTypeId" index="index"
+                 open="(" close=")" separator=",">#{bookTypeId}</foreach>
+        limit #{startRow}, #{pageSize}
+    </select>
+    <!--查询主类型图书数量-->
+    <select id="getTotalOfLTBooks" resultType="int">
+        SELECT
+        count(*)
+        from book where type_id in
+        <foreach collection="list" item="bookTypeId" index="index"
+                 open="(" close=")" separator=",">#{bookTypeId}</foreach>
+    </select>
+
+    <!--查询小类型图书-->
+    <select id="getSmallTypeBooks" resultMap="bookMap">
+        select
+        id, book_title, book_file, book_cover
+        from book where type_id=#{type_id}
+        limit #{startRow}, #{pageSize}
+    </select>
+    <!--查询小类型图书数量-->
+    <select id="getTotalOfSTBooks" resultType="int">
+        select
+        count(*)
+        from book where type_id=#{type_id}
+    </select>
+
+
+    <!--查询图书的下载次数-->
+    <select id="queryByDownloadTimes" resultMap="bookMap">
+        select
+        <include refid="book_columns" />
+        from book
+        order by download_times desc,
+        book_pubYear desc
+        limit 6
+    </select>
+
+    <!--下载次数加1-->
+    <update id="addDownloadTimes" parameterType="long">
+        update book set
+        download_times=download_times+1
+        where id=#{id}
+    </update>
+
+    <!--通过书名模糊查询图书-->
+    <select id="searchBookByTitle" parameterType="String" resultMap="bookMap">
+        select
+        <include refid="book_columns" />
+        from book
+        where book_title LIKE concat('%', #{searchTxt}, '%')
+        order by download_times desc
+        limit 10
+    </select>
+
+    <!--通过作者模糊查询图书-->
+    <select id="searchBookByAuthor" parameterType="String" resultMap="bookMap">
+        select
+        <include refid="book_columns" />
+        from book
+        where book_author LIKE concat('%', #{searchTxt}, '%')
+        order by download_times desc
+        limit 10
+    </select>
+
+    <!--删除图书-->
+    <delete id="deleteBook" parameterType="long">
+        delete from book where id=#{id}
+    </delete>
+
+</mapper>

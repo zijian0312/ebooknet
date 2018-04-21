@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lianshuwang.dao.AvatarDao">
+
+    <resultMap id="avatarMap" type="com.lianshuwang.domin.Avatar">
+        <id column="id" property="id" />
+        <result column="avatar_txt" property="avatar_txt" />
+        <result column="avatar_img" property="avatar_img" />
+    </resultMap>
+
+    <select id="queryById" parameterType="int" resultMap="avatarMap">
+        SELECT id, avatar_txt, avatar_img from avatar WHERE id=#{id}
+    </select>
+
+    <select id="queryAll" resultMap="avatarMap">
+        SELECT id, avatar_txt, avatar_img FROM avatar
+    </select>
+
+    <select id="queryByImgPath" parameterType="String" resultType="int">
+        select id from avatar where avatar_img=#{avatar_img}
+    </select>
+
+
+</mapper>

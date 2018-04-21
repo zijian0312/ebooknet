@@ -1,0 +1,51 @@
+body {
+    max-height: 766px;
+}
+#nav .nav {
+    margin-left: 15px;
+}
+#nav #user {
+    padding-top: 4px;
+}
+.panel {
+    margin-top: 26px;
+}
+.panel #searchByDate,#searchByBook,#searchByUser {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.searchBy .searchForm {
+    margin-top: 10px;
+}
+#modifyModal #pubYear {
+    padding-left: 8%;
+}
+#modifyModal #imageInfo {
+    left: 18px;
+    width: 97%;
+    background-color: #ffffff;
+}
+#modifyModal .btn-file {
+    position: relative;
+    overflow: hidden;
+    padding-left: 18px;
+}
+#modifyModal .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: right;
+    filter: alpha(opacity = 0);
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    display: block;
+}
+#modifyModal #buttons {
+    margin: 40px auto;
+}
+#modifyModal #buttons button:last-child {
+    margin-left: 20%;
+}

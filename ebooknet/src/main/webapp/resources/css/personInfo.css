@@ -1,0 +1,76 @@
+body {
+    max-height: 766px;
+}
+/*顶部导航栏样式*/
+.navbar .navbar-header .navbar-toggle {
+    margin-top: 20px;
+}
+.navbar .navbar-header .navbar-brand {
+    padding-top: 7px;
+    margin-right: 10px;
+    width: 150px;
+    height: 70px;
+}
+.navbar #navbar {
+    padding-top: 12px;
+}
+.navbar #navbar ul.nav {
+    margin-left: 30px;
+}
+/*登录注册按钮央视*/
+.navbar #navbar .btn-group {
+    padding-top: 7px;
+    margin-right: 10px;
+}
+/*已登录用户头像信息样式*/
+.navbar #navbar #loginedInfo {
+    padding-top: 12px;
+    margin-right: 10px;
+}
+.navbar #navbar #loginedInfo img {
+    width:20px;
+    height: 20px;
+}
+#personInfo.container .row {
+    margin-top: 100px;
+    min-height: 446px;
+}
+#personInfo.container .row .list-group {
+    margin-top: 20px;
+}
+#personInfo.container .row .panel-body .label-img img{
+    max-width: 80px;
+    max-height: 80px;
+    border: 1px #d4d4d4 solid;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#personInfo.container .row .panel-body .label-name {
+    margin-left: 20%;
+    width: 70px;
+    text-align: right;
+}
+#personInfo.container .row .panel-body .label-value {
+    margin-left: 16px;
+}
+#personInfo.container .row .panel-body #infoModify .info-modify {
+    margin-top: 10px;
+}
+#personInfo.container .row .panel-body #infoModify .img-select {
+    padding-left: 50px;
+}
+#personInfo.container .row .panel-body #infoModify .block {
+    display: block;
+}
+#personInfo.container .row .panel-body #infoModify img {
+    max-width: 80px;
+    max-height: 80px;
+    margin-bottom: 8px;
+}
+#personInfo.container .row .panel-body #pwdModify .form-group:last-child {
+    padding-top: 10px;
+    margin-left: 18%;
+}
+#personInfo.container .row .panel-body #feedback .form-group:last-child {
+    margin-left: 18%;
+}

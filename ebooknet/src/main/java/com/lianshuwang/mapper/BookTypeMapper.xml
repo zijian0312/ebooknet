@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lianshuwang.dao.BookTypeDao">
+
+    <resultMap id="bookTypeMap" type="com.lianshuwang.domin.BookType">
+        <id column="id" property="id" />
+        <result column="book_large_type" property="book_large_type" />
+        <result column="book_small_type" property="book_small_type" />
+        <result column="large_type_name" property="large_type_name" />
+        <result column="small_type_name" property="small_type_name" />
+    </resultMap>
+
+    <sql id="bookType_columns">
+        id, book_large_type, book_small_type, large_type_name, small_type_name
+    </sql>
+
+    <select id="queryById" parameterType="int" resultMap="bookTypeMap">
+        SELECT id, book_large_type, book_small_type,
+          large_type_name, small_type_name FROM book_type WHERE id=#{id}
+    </select>
+
+    <select id="queryByLargeTypeName" parameterType="String" resultMap="bookTypeMap">
+        SELECT
+        <include refid="bookType_columns" />
+        FROM book_type WHERE large_type_name=#{larTypeName}
+    </select>
+
+
+
+
+
+</mapper>

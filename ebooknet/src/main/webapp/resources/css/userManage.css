@@ -1,0 +1,34 @@
+body {
+    max-height: 766px;
+}
+#nav .nav {
+    margin-left: 15px;
+}
+#nav #user {
+    padding-top: 4px;
+}
+.panel {
+    margin-top: 26px;
+}
+.panel .col-md-3 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.panel .col-md-3 p {
+    font-size: 16px;
+}
+.panel .col-md-3 .badge {
+    font-size: 17px;
+}
+.panel .col-md-9 .input-group .form-control {
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.input-group .input-group-addon {
+    background: white !important;
+}
+.input-group button {
+    border:0;
+    background: transparent;
+}

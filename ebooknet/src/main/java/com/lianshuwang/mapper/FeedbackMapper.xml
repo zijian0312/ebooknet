@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lianshuwang.dao.FeedbackDao">
+
+    <resultMap id="feedbackMap" type="com.lianshuwang.domin.Feedback">
+        <id column="id" property="id" />
+        <result column="logingedUser" property="loginedUser" />
+        <result column="contact" property="contact" />
+        <result column="suggestion" property="suggestion" />
+        <result column="postTime" property="postTime" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <sql id="feedback_columns">
+        id, loginedUser, contact, suggestion, postTime
+    </sql>
+
+    <insert id="addFeedback" parameterType="Feedback">
+        insert into
+        feedback(loginedUser,contact,suggestion,postTime,status)
+        values(#{loginedUser},#{contact},#{suggestion},#{postTime},0)
+    </insert>
+
+    <select id="queryAllNotRead" resultMap="feedbackMap">
+        SELECT <include refid="feedback_columns" />
+        from feedback where status=0
+        order by id
+    </select>
+
+    <update id="setOneRead" parameterType="int">
+        UPDATE feedback
+        set status=1
+        where id=#{id}
+    </update>
+
+    <update id="setAllRead">
+        UPDATE feedback
+        set status=1
+        where status=0
+    </update>
+</mapper>

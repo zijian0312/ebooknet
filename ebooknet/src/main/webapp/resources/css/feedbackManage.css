@@ -1,0 +1,29 @@
+body {
+    max-height: 766px;
+}
+#nav .nav {
+    margin-left: 15px;
+}
+#nav #user {
+    padding-top: 4px;
+}
+.panel {
+    margin-top: 26px;
+}
+.panel .table {
+    table-layout: fixed;
+}
+.panel .panel-body .row .pull-right {
+    margin-right: 10%;
+}
+.panel .panel-body .container .table .suggestion {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#viewModal .modal-body p {
+    width: 80%;
+    margin: 0 auto;
+    text-indent: 36px;
+    font-size: 18px;
+}

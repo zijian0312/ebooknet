@@ -1,0 +1,72 @@
+body {
+    max-height: 766px;
+}
+/*顶部导航栏样式*/
+.navbar .navbar-header .navbar-toggle {
+    margin-top: 20px;
+}
+.navbar .navbar-header .navbar-brand {
+    padding-top: 7px;
+    margin-right: 10px;
+    width: 150px;
+    height: 70px;
+}
+.navbar #navbar {
+    padding-top: 12px;
+}
+.navbar #navbar ul.nav {
+    margin-left: 30px;
+}
+/*登录注册按钮央视*/
+.navbar #navbar .btn-group {
+    padding-top: 7px;
+    margin-right: 10px;
+}
+/*已登录用户头像信息样式*/
+.navbar #navbar #loginedInfo {
+    padding-top: 2px;
+    margin-right: 10px;
+}
+.navbar #navbar #loginedInfo img {
+    width:50px;
+    height: 50px;
+}
+
+#uploadForm {
+    margin-top: 4px;
+    margin-left: 45px;
+}
+#uploadForm .form-group {
+    margin-bottom: 25px;
+}
+
+#upload.container .row {
+    margin-top: 68px;
+}
+.row .panel #uploadForm #summary {
+    resize: none;
+}
+
+#fileInfo, #imageInfo {
+    left: 18px;
+    width: 97%;
+    background-color: #ffffff;
+}
+.row .panel #uploadForm .btn-file {
+    position: relative;
+    overflow: hidden;
+    padding-left: 18px;
+}
+.row .panel #uploadForm .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: right;
+    filter: alpha(opacity = 0);
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    display: block;
+}

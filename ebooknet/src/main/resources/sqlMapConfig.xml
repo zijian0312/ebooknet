@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!-- 全局setting配置 -->
+
+    <!-- 配置别名 -->
+    <typeAliases>
+        <typeAlias type="com.lianshuwang.domin.User" alias="User" />
+        <typeAlias type="com.lianshuwang.domin.Book" alias="Book" />
+        <typeAlias type="com.lianshuwang.domin.Avatar" alias="Avatar" />
+        <typeAlias type="com.lianshuwang.domin.BookType" alias="BookType" />
+        <typeAlias type="com.lianshuwang.domin.Contribution" alias="Contribution" />
+        <typeAlias type="com.lianshuwang.domin.Upload" alias="Upload" />
+        <typeAlias type="com.lianshuwang.domin.Feedback" alias="Feedback" />
+    </typeAliases>
+
+</configuration>
