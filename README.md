@@ -17,16 +17,16 @@
 
 ## 部分页面展示
 
-![首页](http://p5tv038sm.bkt.clouddn.com/blog/180421/jB6Hb022ge.png?imageslim)
+![首页](https://studentssolano-my.sharepoint.com/personal/slew3_students_solano_edu/_layouts/15/download.aspx?share=EfxRd_VL7hJIrY8iBBKL-VYBNpSKaBx5hTdPqGyqLKco3A&ext=.png)
 
 
-![搜索](http://p5tv038sm.bkt.clouddn.com/blog/180421/eLd91dJi2i.png?imageslim)
+![搜索](https://studentssolano-my.sharepoint.com/personal/slew3_students_solano_edu/_layouts/15/download.aspx?share=EVfvPK6Fuv1Gp633JthI2W8B4a1GIemGfOST_fN9yIs5Xw&ext=.png)
 
 
-![详情](http://p5tv038sm.bkt.clouddn.com/blog/180421/Iha91CaBeC.png?imageslim)
+![详情](https://studentssolano-my.sharepoint.com/personal/slew3_students_solano_edu/_layouts/15/download.aspx?share=EQK1eifd3AJBo3pDBdKAl8YBHNXusNFmTJgMGJsXxYSx4Q&ext=.png)
 
 
-![上传](http://p5tv038sm.bkt.clouddn.com/blog/180421/8K66khDkgF.png?imageslim)
+![上传](https://studentssolano-my.sharepoint.com/personal/slew3_students_solano_edu/_layouts/15/download.aspx?share=EQXReV6G-ThAmsEMMVh-gBEBwyLKgG8_eUbUD_P_6sp56Q&ext=.png)
 
 
-![后台管理](http://p5tv038sm.bkt.clouddn.com/blog/180421/9CL71BGkHL.png?imageslim)
+![后台管理](https://studentssolano-my.sharepoint.com/personal/slew3_students_solano_edu/_layouts/15/download.aspx?share=EQxsfbERVp5NnlVtCyFHrvABTFonZRPqFrd6_hbnMmUQ1A&ext=.png)
