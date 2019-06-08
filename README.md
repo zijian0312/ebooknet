@@ -17,16 +17,16 @@
 
 ## 部分页面展示
 
-![首页](http://150.109.112.59:8000/images/2019/05/07/index.png)
+![首页](https://img.4cyaw.com/imgs/2019/06/353aa69d7d98ed80.png)
 
 
-![搜索](http://150.109.112.59:8000/images/2019/05/07/search.png)
+![搜索](https://img.4cyaw.com/imgs/2019/06/f309ea2fa1066959.png)
 
 
-![详情](http://150.109.112.59:8000/images/2019/05/07/detail.png)
+![详情](https://img.4cyaw.com/imgs/2019/06/c4fa8de52841d395.png)
 
 
-![上传](http://150.109.112.59:8000/images/2019/05/07/upload.png)
+![上传](https://img.4cyaw.com/imgs/2019/06/0dfa77ccc3a4e857.png)
 
 
-![后台管理](http://150.109.112.59:8000/images/2019/05/07/backstage.png)
+![后台管理](https://img.4cyaw.com/imgs/2019/06/1b5e414616a434eb.png)
